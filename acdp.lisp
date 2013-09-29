@@ -65,11 +65,12 @@ The default value is the value of `*binary*`."
 
 (defun stop (&optional (player *current-player*))
   "Stops `player`. If `player` is omitted, `*current-player*` is used."
-  (format t "Stopping process ~a~%" (external-program:process-id player))
-  (send-command player "stop")
-  (when (eq :running (external-program:process-status player))
-    (external-program:signal-process player 15))
-  (format t "Stopped process ~a~%" (external-program:process-id player)))
+  (when player
+    (format t "Stopping process ~a~%" (external-program:process-id player))
+    (send-command player "stop")
+    (when (eq :running (external-program:process-status player))
+      (external-program:signal-process player 15))
+    (format t "Stopped process ~a~%" (external-program:process-id player))))
 
 (defun seek (sectors &optional (player *current-player*))
   "Seeks `player` by `sectors` sectors.
