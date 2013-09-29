@@ -358,6 +358,7 @@ ol {
   (setf *server* (clack:clackup *app* :port port)))
 
 (defun stop ()
+  (acdp:stop)
   (clack:stop *server*))
 
 (defun run ()
