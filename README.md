@@ -1,6 +1,14 @@
 ACDP is an interface to my acdp player.
 This the interface is easy to guess, look at the source for details.
 
+You can load build.sh to create an executable, e.g. by
+
+    sbcl --load build.sh
+
+or
+
+    ccl --load build.sh
+
 * License
 
 Copyright (C) 2013 Christoph Finkensiep <chfin@freenet.de>

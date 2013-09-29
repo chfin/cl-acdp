@@ -2,4 +2,4 @@
 
 (defpackage #:acdp-server
   (:use #:cl #:parenscript)
-  (:export #:start #:stop))
+  (:export #:start #:stop #:run #:quit #:build))

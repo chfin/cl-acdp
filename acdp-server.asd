@@ -5,6 +5,7 @@
   :description "A web interface to acdp, the alsa cd player."
   :author "Christoph Finkensiep <chfin@freenet.de>"
   :license "MIT"
-  :depends-on (#:acdp #:cl-json #:ningle #:spinneret #:parenscript)
+  :depends-on (#:acdp #:cl-json #:ningle #:spinneret
+		      #:parenscript #:trivial-dump-core)
   :components ((:file "package-server")
                (:file "acdp-server")))
